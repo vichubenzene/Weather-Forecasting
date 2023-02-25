@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+	<title>Weather Forecasting Website</title>
+</head>
+<body>
+	<h1>Weather Forecasting Website</h1>
+	<form>
+		<label for="city" style="color:black";>Enter city name:</label>
+		<input type="text" id="city" name="city">
+		<input type="button" value="Get Weather" onclick="getWeather()">
+		<span id="error"></span>
+	</form>
+	<br>
+	
+	<p><span id="displayedCity"></span></p>
+	<p><span id="temp"></span></p>
+	<p><span id="desc"></span></p>
+	<button id="nightModeBtn" class="toggle-button">🌙</button>
+	<p id="currentLocation" style="margin-top: 30px;"></p>
+	<p id="currentTemperature"></p>
+
+	<a  href="https://github.com/vichubenzene/Weather-Forecating" class="buttong" target="_blank">Github </a>
+	<script src="script.js"></script>
+</body>
+</html>
+
