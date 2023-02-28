@@ -1,7 +1,8 @@
+let globalCity = '';
 function getWeather() {
 	var city = document.getElementById("city").value;
 	if (city==""){
-		city = "Bengaluru";
+		city = globalCity;
 	}
 	var url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=bf88ebbec8ca60e3a8591d385a42fc04&units=metric";
 
@@ -27,6 +28,7 @@ fetch("https://ipapi.co/json/")
 .then(response => response.json())
 .then(data => {
 	var city = data.city;
+	globalCity=data.city;
 	var url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=bf88ebbec8ca60e3a8591d385a42fc04&units=metric";
 
 	fetch(url)
