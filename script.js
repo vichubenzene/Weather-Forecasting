@@ -14,16 +14,39 @@ function getWeather() {
 			document.getElementById("displayedCity").innerHTML = "";
 			document.getElementById("temp").innerHTML = "";
 			document.getElementById("desc").innerHTML = "";
+			document.getElementById("climate-image").src="";
 		} else {
 			document.getElementById("error").innerHTML = "";
 			document.getElementById("displayedCity").innerHTML = data.name + ", "+ data.sys.country;
 			document.getElementById("temp").innerHTML = data.main.temp + " &#8451;";
 			document.getElementById("desc").innerHTML = data.weather[0].description;
+			document.getElementById("climate-image").src="image/"+ wallpaper(data.weather[0].description);
 		}
 	})
 	.catch(error => console.log(error));
 }
-
+function wallpaper(info)
+{
+	info=info.toLowerCase();
+	if (info.includes("clear"))
+	{
+		return "Clear.jpg"}
+	else if(info.includes("cloud"))
+	{
+		return "Cloud.jpg"}
+	else if(info.includes("haze"))
+	{
+		return "Haze.jpg"}
+	else if(info.includes("mist"))
+	{
+		return "Mist.jpg"}
+	else if(info.includes("rain"))
+	{
+		return "Rain.jpg"}
+	else if(info.includes("snow"))
+	{
+		return "Snow.jpg"}
+}
 fetch("https://ipapi.co/json/")
 .then(response => response.json())
 .then(data => {
@@ -39,6 +62,7 @@ fetch("https://ipapi.co/json/")
 		document.getElementById("displayedCity").innerHTML = data.name + ", "+ data.sys.country;
 		document.getElementById("temp").innerHTML = data.main.temp + " &#8451;";
 		document.getElementById("desc").innerHTML = data.weather[0].description;
+		document.getElementById("climate-image").src="image/"+ wallpaper(data.weather[0].description);
 	})
 	.catch(error => console.log(error));
 })

@@ -1,6 +1,9 @@
 body {
 	font-family: Arial, sans-serif;
 	text-align: center;
+	background:fixed;
+	background: center;
+	background:  no-repeat;
 }
 
 /* Styles for night mode */
@@ -162,3 +165,8 @@ body.night-mode #currentLocation {
 	   background-color: whitesmoke;
 	  color:black
   }
+
+#climate-image{
+	max-width: 150px;
+	Max-height: 150px
+}
