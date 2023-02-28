@@ -2,7 +2,7 @@
 
 > **Weather forecasting with city name** 
 
-Give ` location permission ` to display your nearest city weather using ip address <br><br>
+display's your nearest city weather using ip address <br><br>
 with ` day and night mode ` feature
 
 Live at https://viswa-weather-forecasting.netlify.app/
